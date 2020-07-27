@@ -26,7 +26,11 @@ function searchInput() {
       if (filmList) {
 
         for (var i = 0; i < resultsNum; i++) {
+          var template = $("#film-template").html();
+          var compiled = Handlebars.compile(template);
+          var target = $("#filmList");
 
+          target.append(filmList[i]);
         }
 
       }

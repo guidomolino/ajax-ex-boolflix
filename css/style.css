@@ -17,3 +17,10 @@ body{
   width: 300px;
   padding: 5px 10px;
 }
+
+#filmList{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  color: white;
+}
