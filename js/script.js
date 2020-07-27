@@ -7,13 +7,14 @@ function searchBtn() {
 function searchInput() {
 
   var ricercaUtente = $("#searchbar").val();
+  var apiKey = "78cbe2d71a8afe04bdaddc012b93da5f";
   console.log(ricercaUtente);
 
   $.ajax({
     url: "https://api.themoviedb.org/3/search/movie",
     method: "GET",
     data: {
-      api_key: "78cbe2d71a8afe04bdaddc012b93da5f",
+      api_key: apiKey,
       query: ricercaUtente
     },
     success: function(data, state){
@@ -25,12 +26,14 @@ function searchInput() {
 
       if (filmList) {
 
-        for (var i = 0; i < resultsNum; i++) {
-          var template = $("#film-template").html();
-          var compiled = Handlebars.compile(template);
-          var target = $("#filmList");
+        var template = $("#film-template").html();
+        var compiled = Handlebars.compile(template);
+        var target = $("#filmList");
 
-          target.append(filmList[i]);
+        for (var i = 0; i < filmList.length; i++) {
+          var film = filmList[i];
+          var filmHTML = compiled(film);
+          target.append(filmHTML);
         }
 
       }

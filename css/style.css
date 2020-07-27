@@ -9,7 +9,6 @@ body{
   display: flex;
   justify-content: center;
   width: 100%;
-
   margin-top: 20px;
 }
 
@@ -18,9 +17,17 @@ body{
   padding: 5px 10px;
 }
 
-#filmList{
-  display: flex;
-  justify-content: center;
-  width: 100%;
-  color: white;
+ul{
+  position: relative;
+  left: 32%;
+  list-style: none;
+}
+
+#filmList li{
+  width: 30%;
+  background-color: rgb(246, 141, 94);
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 30px;
 }
