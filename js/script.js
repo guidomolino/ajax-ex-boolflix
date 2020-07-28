@@ -39,6 +39,7 @@ function searchFilm(ricercaUtente, apiKey) {
 
         for (var i = 0; i < filmList.length; i++) {
           var film = filmList[i];
+          starredVote(film, target);
           var filmHTML = compiled(film);
           target.append(filmHTML);
         }
@@ -78,6 +79,7 @@ function searchTV(ricercaUtente, apiKey) {
 
         for (var i = 0; i < tvList.length; i++) {
           var tv = tvList[i];
+          starredVote(tv, target);
           var tvHTML = compiled(tv);
           target.append(tvHTML);
         }
@@ -91,6 +93,20 @@ function searchTV(ricercaUtente, apiKey) {
       console.log(error);
     }
   })
+}
+
+function starredVote(oggetto, target) {
+  var vote = oggetto["vote_average"];
+  // numero stelle = voto / 2 arrotondato per eccesso
+  var starsNumber = Math.round(vote/2);
+  // stampo stelle in base al numero
+
+  for (var i = 0; i < starsNumber; i++) {
+    var stelle =
+    var voteTemplate = $("#vote-template").html();
+    target.append(voteTemplate);
+  }
+
 }
 
 

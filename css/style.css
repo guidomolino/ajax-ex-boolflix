@@ -5,6 +5,10 @@ body{
   box-sizing: border-box;
 }
 
+#vote-template{
+  display: none;
+}
+
 .search{
   display: flex;
   justify-content: center;
