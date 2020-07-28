@@ -23,6 +23,14 @@
         <h4>{{vote_average}}</h4>
       </li>
     </script>
+    <script id="tv-template" type="text/x-handlebars-template">
+      <li class="tv-template">
+        <h2>{{name}}</h2>
+        <h3>{{original_name}}</h3>
+        <h4>{{original_language}}</h4>
+        <h4>{{vote_average}}</h4>
+      </li>
+    </script>
   </head>
   <body>
 
@@ -30,11 +38,10 @@
       <input type="search" id="searchbar" name="searchbar" placeholder="Ricerca film">
       <button type="button" id="searchbar-btn" name="button">Search</button>
     </div>
-
-    <ul id="filmList">
-
-    </ul>
-
+    <div class="results">
+      <ul id="filmList"></ul>
+      <ul id="tvList"></ul>
+    </div>
 
   </body>
 </html>

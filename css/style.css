@@ -17,15 +17,28 @@ body{
   padding: 5px 10px;
 }
 
+.results{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+}
+
 ul{
   position: relative;
-  left: 32%;
+  width: 300px;
   list-style: none;
 }
 
 #filmList li{
-  width: 30%;
   background-color: rgb(246, 141, 94);
+  border-radius: 5px;
+  text-align: center;
+  padding: 5px;
+  margin-bottom: 30px;
+}
+#tvList li{
+  background-color: rgb(255, 97, 255);
   border-radius: 5px;
   text-align: center;
   padding: 5px;
