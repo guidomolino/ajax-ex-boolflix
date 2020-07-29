@@ -149,7 +149,7 @@ function languageIcon(language) {
 function copertinaUrl(poster) {
   var urlMain = 'https://image.tmdb.org/t/p/';
   var urlSize = 'w342';
-  var finalUrl ='<img src='+ urlMain + urlSize + poster + 'alt="">';
+  var finalUrl = urlMain + urlSize + poster;
   console.log(finalUrl);
   return finalUrl;
 }
