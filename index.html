@@ -19,24 +19,20 @@
       <li class="film-template">
         <h2>{{title}}</h2>
         <h3>{{original_title}}</h3>
-        <h4>{{original_language}}</h4>
-        <h4 id="vote"></h4>
+        {{{flag}}} <br>
+        {{{stars}}}
       </li>
     </script>
-    <!-- {{vote_average}} -->
     <script id="tv-template" type="text/x-handlebars-template">
       <li class="tv-template">
         <h2>{{name}}</h2>
         <h3>{{original_name}}</h3>
-        <h4>{{original_language}}</h4>
-        <h4>{{}}</h4>
+        {{{flag}}} <br>
+        {{{stars}}}
       </li>
     </script>
   </head>
   <body>
-    <div id="vote-template">
-        <i class="fas fa-star"></i>
-    </div>
     <div class="search">
       <input type="search" id="searchbar" name="searchbar" placeholder="Ricerca film">
       <button type="button" id="searchbar-btn" name="button">Search</button>
@@ -45,6 +41,7 @@
       <ul id="filmList"></ul>
       <ul id="tvList"></ul>
     </div>
+
 
   </body>
 </html>
