@@ -42,8 +42,10 @@ function searchFilm(ricercaUtente, apiKey) {
 
           var vote = film["vote_average"];
           var language = film["original_language"];
+          var poster = film["poster_path"];
           film.stars = starredVote(vote);
           film.flag = languageIcon(language);
+          film.copertina = copertinaUrl(poster);
 
           var filmHTML = compiled(film);
           target.append(filmHTML);
@@ -87,8 +89,10 @@ function searchTV(ricercaUtente, apiKey) {
 
           var vote = tv["vote_average"];
           var language = tv["original_language"];
+          var poster = tv["poster_path"];
           tv.stars = starredVote(vote);
           tv.flag = languageIcon(language);
+          tv.copertina = copertinaUrl(poster);
 
           var tvHTML = compiled(tv);
           target.append(tvHTML);
@@ -140,6 +144,16 @@ function languageIcon(language) {
   }
   return flagIcon;
 }
+
+//funzione url di background
+function copertinaUrl(poster) {
+  var urlMain = 'https://image.tmdb.org/t/p/';
+  var urlSize = 'w342';
+  var finalUrl ='<img src='+ urlMain + urlSize + poster + 'alt="">';
+  console.log(finalUrl);
+  return finalUrl;
+}
+
 
 
 function init() {
