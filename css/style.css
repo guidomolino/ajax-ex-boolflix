@@ -1,50 +1,106 @@
 body{
-  background-color: rgb(12, 57, 8);
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  background-color: rgb(54, 54, 54);
 }
 
-#vote-template{
-  display: none;
+/* header */
+
+header{
+  padding: 0 5%;
+  background-color: black;
 }
 
-.search{
+header nav{
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  align-items: center;
   width: 100%;
-  margin-top: 20px;
+
+
+}
+
+header nav h1{
+  color: rgb(135, 0, 0);
+  font-size: 40px;
+}
+
+.search button{
+  padding: 10px;
 }
 
 .search input{
-  width: 300px;
-  padding: 5px 10px;
+  width: 350px;
+  padding: 10px;
+}
+
+/* main */
+
+main{
+
 }
 
 .results{
-  display: flex;
-  flex-direction: row;
+  display: none;
+  flex-direction: column;
   justify-content: space-around;
   width: 100%;
+
+  padding-top: 50px;
+}
+
+.results h1{
+  font-size: 40px;
+  margin-left: 3.7%;
+  color: white;
 }
 
 ul{
   position: relative;
-  width: 300px;
+  display: flex;
   list-style: none;
+
+  width: 90%;
+  margin: 0 2%;
+  margin-bottom: 80px;
+
+  overflow: scroll;
+  overflow-y: hidden;
 }
 
-#filmList li{
+#filmList li, #tvList li{
   background-color: rgb(246, 141, 94);
+  color: white;
+
+  min-width: 330px;
+  min-height: 430px;
+
   border-radius: 5px;
   text-align: center;
-  padding: 5px;
-  margin-bottom: 30px;
+  margin: 30px 30px 30px 0;
 }
 #tvList li{
   background-color: rgb(255, 97, 255);
-  border-radius: 5px;
-  text-align: center;
-  padding: 5px;
-  margin-bottom: 30px;
+}
+
+.retro{
+  display: none;
+  background-color: rgba(0, 0, 0, 0.95);
+  padding-top: 100px;
+  width: 100%;
+  height: 77%;
+}
+
+.retro i{
+  color: yellow;
+  margin-top: 20px;
+}
+
+.film-template:hover .retro{
+  display: block;
+}
+
+.tv-template:hover .retro{
+  display: block;
 }

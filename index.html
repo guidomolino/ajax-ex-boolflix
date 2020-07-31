@@ -17,30 +17,43 @@
     <link rel="stylesheet" href="css/style.css">
     <script id="film-template" type="text/x-handlebars-template">
       <li class="film-template" style="background-image: url({{copertina}});">
-        <h2>{{title}}</h2>
-        <h3>{{original_title}}</h3>
-        {{{flag}}} <br>
-        {{{stars}}} <br>
+        <div class="retro">
+          <h2>{{title}}</h2>
+          <h3>{{original_title}}</h3>
+          {{{flag}}} <br>
+          {{{stars}}} <br>
+        </div>
       </li>
     </script>
     <script id="tv-template" type="text/x-handlebars-template">
       <li class="tv-template" style="background-image: url({{copertina}});">
-        <h2>{{name}}</h2>
-        <h3>{{original_name}}</h3>
-        {{{flag}}} <br>
-        {{{stars}}} <br>
+        <div class="retro">
+          <h2>{{name}}</h2>
+          <h3>{{original_name}}</h3>
+          {{{flag}}} <br>
+          {{{stars}}} <br>
+        </div>
       </li>
     </script>
   </head>
   <body>
-    <div class="search">
-      <input type="search" id="searchbar" name="searchbar" placeholder="Ricerca film">
-      <button type="button" id="searchbar-btn" name="button">Search</button>
-    </div>
-    <div class="results">
-      <ul id="filmList"></ul>
-      <ul id="tvList"></ul>
-    </div>
+    <header>
+      <nav>
+        <h1>BOOLFLIX</h1>
+        <div class="search">
+          <input type="search" id="searchbar" name="searchbar" placeholder="Ricerca film">
+          <button type="button" id="searchbar-btn" name="button">Search</button>
+        </div>
+      </nav>
+    </header>
+    <main>
+      <div class="results">
+        <h1>Lista film</h1>
+        <ul id="filmList"></ul>
+        <h1>Lista serie TV</h1>
+        <ul id="tvList"></ul>
+      </div>
+    </main>
 
 
   </body>

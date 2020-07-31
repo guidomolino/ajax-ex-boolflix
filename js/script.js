@@ -11,6 +11,7 @@ function searchInput() {
   console.log(ricercaUtente);
   searchFilm(ricercaUtente, apiKey);
   searchTV(ricercaUtente, apiKey);
+  $(".results").css("display", "block");
 
 }
 
@@ -96,6 +97,7 @@ function searchTV(ricercaUtente, apiKey) {
 
           var tvHTML = compiled(tv);
           target.append(tvHTML);
+
         }
 
       }
@@ -150,10 +152,8 @@ function copertinaUrl(poster) {
   var urlMain = 'https://image.tmdb.org/t/p/';
   var urlSize = 'w342';
   var finalUrl = urlMain + urlSize + poster;
-  console.log(finalUrl);
   return finalUrl;
 }
-
 
 
 function init() {
